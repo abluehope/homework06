@@ -19,9 +19,9 @@ $(function () {
   $(".main_slide").slick({
     pauseOnHover: false,
     arrows: false,
-    fade: true,
+    // fade: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 6000,
     speed: 1000,
   });
 
