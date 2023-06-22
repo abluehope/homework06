@@ -1,11 +1,3 @@
-:root {
-  --mc: #9c1d1d;
-  --wc: #ffffff;
-}
-
-* {
-  outline: 1px solid --tomato;
-}
 .inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -40,16 +32,15 @@
   position: fixed;
   left: 0;
   right: 0;
-  color: var(--wc);
+  color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(0, 0, 0, 0.7);
   word-break: keep-all;
   z-index: 999;
 }
 
 .header.on {
   border-bottom: 1px solid #ddd;
-  background: var(--wc);
+  background: #fff;
   color: #333;
 }
 
@@ -102,28 +93,106 @@ h1 img {
 
 .main_visual .main_slide .itm {
   position: relative;
-  height: 100vh;
+  height: 85vh;
 }
 
 .main_visual .main_slide .main_slide_nm {
-  background: url(../images/banner.jpg) no-repeat center center/cover;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)),
+    url(../images/main_visual_01.jpg) no-repeat center center/cover;
+}
+.main_visual .main_slide .main_slide_nk {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)),
+    url(../images/section_01_01.jpg) no-repeat center center/cover;
 }
 
 .main_visual .main_slide .slogan {
   position: absolute;
   left: 50%;
-  bottom: 15%;
-  transform: translate(-50%, -50%);
+  bottom: 20%;
+  transform: translate(-50%, 0);
+  text-align: right;
+  z-index: 999;
   width: 100%;
 }
 
 .main_visual .main_slide .slogan h2 {
   margin: 0 0 30px 0;
-  color: var(--wc);
+  color: #fff;
   text-shadow: 0 0 3px #000;
   font-size: 40px;
   font-weight: 700;
   word-break: keep-all;
+}
+
+.main_visual .main_slide .slogan p {
+  color: #fff;
+  text-shadow: 0 0 3px #000;
+  font-size: 17px;
+  font-weight: 300;
+  word-break: keep-all;
+}
+
+.main_visual .main_slide .main_slide_nm .slogan p {
+  margin: 0 0 30px 0;
+}
+
+.main_visual .main_slide .main_slide_nk .slogan p {
+  margin: 0 0 0 auto;
+  width: 500px;
+  line-height: 22px;
+}
+
+.main_visual .main_slide .slogan a {
+  display: inline-block;
+  padding: 8px 18px 8px 16px;
+  font-weight: 300;
+  color: #fff;
+  background: #9c1d1d;
+}
+
+.main_visual .arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+  max-width: 150px;
+  width: 100%;
+  height: 20px;
+}
+
+.main_visual .arrows i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.main_visual .arrows i:hover {
+  cursor: pointer;
+}
+
+.main_visual .arrows .left {
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+
+.main_visual .arrows .right {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.main_visual .slide_num {
+  position: absolute;
+  bottom: 29px;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  padding: 0 15px;
+
+  color: #fff;
 }
 
 /* section 01 */
@@ -154,7 +223,7 @@ h1 img {
   transform: translate(-50%, -50%);
   width: 2px;
   height: 40px;
-  background: var(--mc);
+  background: #9c1d1d;
 }
 
 .main_content .content figure figcaption p {
@@ -310,7 +379,8 @@ h1 img {
 
 .main_feature .freature_tab .freature_tab_link li a {
   padding: 7px 22px 7px 22px;
-  background: var(--mc);
+  font-size: 14px;
+  background: #9c1d1d;
   color: #ffffff;
 }
 
@@ -410,19 +480,21 @@ h1 img {
 
 .main_banner {
   position: relative;
-  background: url(../images/banner.jpg) no-repeat fixed center center/cover;
-  color: var(--wc);
+  background: url(../images/main_visual_01.jpg) no-repeat fixed center
+    center/cover;
+  color: #fff;
   text-align: center;
 }
 
-.main_banner::after {
+.main_banner::before {
   content: "";
   position: absolute;
   inset: 0 0 0 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .main_banner .tit {
+  position: relative;
   margin-bottom: 0;
   z-index: 999;
 }
@@ -430,7 +502,7 @@ h1 img {
 .main_banner .tit h2 {
   margin: 0 0 15px 0;
   font-weight: 700;
-  color: var(--wc);
+  color: #fff;
 }
 
 .main_banner .tit p {
@@ -440,8 +512,8 @@ h1 img {
 
 .main_banner .tit a {
   padding: 10px 35px 10px 38px;
-  color: var(--wc);
-  background: var(--mc);
+  color: #fff;
+  background: #9c1d1d;
   border-radius: 30px;
 }
 
@@ -511,4 +583,29 @@ h1 img {
 }
 .footer .inner .footer_copyright {
   font-size: 13px;
+}
+
+.to_top {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.to_top.on {
+  bottom: 5%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.to_top i {
+  color: #fff;
+  background: #9c1d1d;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
