@@ -115,21 +115,39 @@ h1 img {
   width: 100%;
 }
 
-.main_visual .main_slide .slogan h2 {
+.main_visual .main_slide .itm h2 {
   margin: 0 0 30px 0;
   color: #fff;
   text-shadow: 0 0 3px #000;
   font-size: 40px;
   font-weight: 700;
   word-break: keep-all;
+
+  transform: translate(0, 70px);
+  opacity: 0;
 }
 
-.main_visual .main_slide .slogan p {
+.main_visual .main_slide .itm.on h2 {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.main_visual .main_slide .itm p {
   color: #fff;
   text-shadow: 0 0 3px #000;
   font-size: 17px;
   font-weight: 300;
   word-break: keep-all;
+
+  transform: translate(0, 70px);
+  opacity: 0;
+}
+
+.main_visual .main_slide .itm.on p {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.5s 0.5s;
 }
 
 .main_visual .main_slide .main_slide_nm .slogan p {
@@ -142,12 +160,21 @@ h1 img {
   line-height: 22px;
 }
 
-.main_visual .main_slide .slogan a {
+.main_visual .main_slide .itm a {
   display: inline-block;
   padding: 8px 18px 8px 16px;
   font-weight: 300;
   color: #fff;
   background: #9c1d1d;
+
+  transform: translate(0, 70px);
+  opacity: 0;
+}
+
+.main_visual .main_slide .itm.on a {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.5s 1s;
 }
 
 .main_visual .arrows {
