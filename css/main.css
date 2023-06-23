@@ -54,7 +54,7 @@
   align-items: center;
   height: 100px;
 
-  transition: 0.5s;
+  transition: height 0.5s;
 }
 
 .header.on .inner {
@@ -72,6 +72,7 @@ h1 img {
 .header .gnb > ul {
   display: flex;
   gap: 70px;
+  padding: 0 30px;
 }
 
 .header .gnb > ul > li > a {
