@@ -84,6 +84,43 @@ h1 img {
   font-size: 17px;
 }
 
+.login_area {
+  padding-left: 50px;
+}
+
+.login_area .member {
+  display: flex;
+  gap: 30px;
+}
+
+.login_area .member a {
+  font-size: 15px;
+}
+
+.header.on .login_area .member a {
+  font-size: 15px;
+}
+
+.login_area .member li {
+  position: relative;
+}
+
+.login_area .member li ~ li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 1px;
+  height: 11px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  transition: 0.5s;
+}
+
+.header.on .login_area .member li ~ li::before {
+  background: #777;
+}
+
 /* main */
 
 /* 메인 슬라이드 */
