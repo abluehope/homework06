@@ -8,6 +8,15 @@ $(function () {
     }
   });
 
+  $(".mobile_btn").on("click", function () {
+    $(this).toggleClass("on");
+    $(".gnb").toggleClass("on");
+  });
+
+  $(window).on("resize", function () {
+    $(".gnb").removeAttr("style");
+  });
+
   $(".main_slide").on("init afterChange", function (e, s, c) {
     const current = $(".main_slide .slick-current");
     current.addClass("on").siblings().removeClass("on");
@@ -19,7 +28,6 @@ $(function () {
   $(".main_slide").slick({
     pauseOnHover: false,
     arrows: false,
-    // fade: true,
     autoplay: true,
     autoplaySpeed: 6000,
     speed: 1000,
